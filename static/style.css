@@ -3,10 +3,20 @@ body {
     padding: 0;
     font-family: 'GilroyRegular', normal;
     width: 100%;
+    overflow: hidden;
 }
 h1, h2, h3, p {
     margin: 0;
     padding: 0;
+}
+.fontB {
+    font-family: 'Gilroy', normal;
+}
+.fontT {
+    font-family: 'GilroyThin', normal;
+}
+.small {
+    font-size: 9px;
 }
 a {
     text-decoration: none;
@@ -15,14 +25,20 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.plr {
+    padding: 0 4%;
+}
+.ml {
+    margin-left: 5rem;
+}
 header {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
-    padding: 0 23px 0 23px;
+    justify-content: space-between;
     box-sizing: border-box;
     box-shadow: 0px 5px 20px rgba(157, 157, 157, 0.25);
+    /* margin-bottom: 300px; */
 }
 .header__form-input {
     width: 700px;
@@ -44,23 +60,28 @@ footer {
     width: 100%;
     position: relative;
 }
-.follow p {
-    margin: 1rem;
+.vector {
+    width: 100%;
+}
+.sec {
     position: absolute;
+    width: 100%;
+    top: 70px;
 }
 .links {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.links p {
-    margin: 40px;
-}
 .foot {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+footer input {
+    border-radius: 40px;
+    background-color: #F3F3F3;
 }
 
 
@@ -70,18 +91,24 @@ footer {
 @font-face {
     font-family: 'Gilroy';
     src: local('Gilroy'), url('fonts/GilroyBold.ttf') format('truetype');
+    src: local('Gilroy'),
+    url('fonts/GilroyBold.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
 @font-face {
     font-family: 'GilroyThin';
     src: local('GilroyThin'), url('fonts/GilroyThin.ttf') format('truetype');
+    src: local('GilroyThin'),
+    url('fonts/GilroyThin.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
 }
 @font-face {
     font-family: 'GilroyRegular';
     src: local('GilroyRegular'), url('fonts/GilroyRegular.ttf') format('truetype');
+    src: local('GilroyRegular'),
+    url('fonts/GilroyRegular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
