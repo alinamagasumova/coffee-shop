@@ -31,21 +31,21 @@ header {
 }
 @font-face {
     font-family: 'Gilroy';
-    src: local('Gilroy'), local('Gilroy'),
+    src: local('Gilroy'),
     url('fonts/GilroyBold.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
 @font-face {
     font-family: 'GilroyThin';
-    src: local('GilroyThin'), local('GilroyThin'),
+    src: local('GilroyThin'),
     url('fonts/GilroyThin.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
 }
 @font-face {
     font-family: 'GilroyRegular';
-    src: local('GilroyRegular'), local('GilroyRegular'),
+    src: local('GilroyRegular'),
     url('fonts/GilroyRegular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
