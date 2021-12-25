@@ -1,8 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Gilroy";
-    font-weight: 100;
+    font-family: 'GilroyRegular', normal;
 }
 h1, h2, h3, p {
     margin: 0;
@@ -31,20 +30,23 @@ header {
     right: 295px;
 }
 @font-face {
-    font-family: "Gilroy";
-    src: url("/fonts/GilroyThin.ttf") format("True Type");
-    font-style: italic;
-    font-weight: 100;
+    font-family: 'Gilroy';
+    src: local('Gilroy'), local('Gilroy'),
+    url('fonts/GilroyBold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
 }
 @font-face {
-    font-family: "Gilroy";
-    src: url("/fonts/GilroyRegular.ttf") format("True Type");
-    font-style: italic;
+    font-family: 'GilroyThin';
+    src: local('GilroyThin'), local('GilroyThin'),
+    url('fonts/GilroyThin.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GilroyRegular';
+    src: local('GilroyRegular'), local('GilroyRegular'),
+    url('fonts/GilroyRegular.ttf') format('truetype');
     font-weight: 400;
-}
-@font-face {
-    font-family: "Gilroy";
-    src: url("/fonts/GilroyBold.ttf") format("True Type");
-    font-style: italic;
-    font-weight: 600;
+    font-style: normal;
 }
