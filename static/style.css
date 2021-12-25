@@ -80,8 +80,23 @@ footer {
     margin-top: 100px;
 }
 footer input {
-    border-radius: 40px;
+    border-radius: 10px;
+    border: 0;
+    height: 30px;
+}
+footer form {
+    position: relative;
+}
+#followInp {
     background-color: #F3F3F3;
+    width: 400px;
+    height: 30px;
+}
+#followBtn {
+    color: #fff;
+    background-color: #F9B300;
+    position: absolute;
+    left: 320px;
 }
 
 
