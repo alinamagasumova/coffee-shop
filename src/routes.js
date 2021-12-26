@@ -15,13 +15,18 @@ router.get("/catalog", (req, res) => {
 
 router.get("/catalog/:category", (req, res) => {
     let categories = {
-        "Coffee": "Свежеобжаренный кофе",
-        "Tea": "Чай и кофейные напитки",
-        "Food": "Здоровое питание",
-        "All": "Каталоги нашей продукции"
+        "coffee": "Свежеобжаренный кофе",
+        "tea": "Чай и кофейные напитки",
+        "food": "Здоровое питание"
     }
     res.render("/Category", {
         title: categories[req.params.category]
+    })
+})
+
+router.get("/basket", (req,res) => {
+    res.render("basket", {
+        title: "Корзина"
     })
 })
 
