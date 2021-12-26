@@ -11,4 +11,4 @@ app.use(express.static("./static"));
 app.use("/", router);
 // app.use("/api", dbRouter);
 
-app.listen(process.env.PORT || 3005);
+app.listen(process.env.PORT || 3007);

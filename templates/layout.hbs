@@ -20,9 +20,7 @@
             <a href="/" style="text-decoration: none;">
                 <img src="/images/svg/basket.svg" alt="basket" class="ml">
             </a>
-            <a href="/">
-                <img src="/images/svg/man.svg" alt="man" class="ml">
-            </a>
+            <img src="/images/svg/man.svg" alt="man" class="ml" onclick="adminPopUp()" style="cursor: pointer;">
         </div>
     </header>
     {{{body}}}
@@ -39,7 +37,9 @@
                 <p class="fontT small" style="margin-top: 12px;">Нажимая на кнопку “Подписаться”, вы принимаете правила <span style="color: #F9B300;">пользовательского соглашения</span></p>
             </div>
             <div class="foot plr">
-                <img src="/images/logo.png" alt="Logo" class="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="Logo" class="logo">
+                </a>
                 <div class="links">
                 <p class="ml"><a href="">Каталог товаров</a></p>
                 <p class="ml"><a href="">Блог</a></p>
@@ -48,5 +48,31 @@
             </div>
         </div>
     </footer>
+    <script>
+        const adminPopUp = (e) => {
+            let popUpBox = document.createElement('div');
+            popUpBox.innerHTML = `
+            <div class="vhod">
+                <p id="close">✕</p>
+                <a href="/">
+                    <img src="/images/logo.png" alt="Logo" class="logo">
+                </a>
+                <h3 class="fontB" style="margin: 10px;">Войти в админку</h3>
+                <form action="">
+                    <input type="email" name="emailAdmin" placeholder="Введите email" id="adminEmailInp">
+                    <input type="password" name="passwordAdmin" placeholder="Введите пароль" id="adminEmailInp">
+                    <input type="button" value="Войти" id="goBtn">
+                </form>
+            </div>`;
+            popUpBox.classList.add('popup');
+            document.body.appendChild(popUpBox);
+            document.body.classList.add('hidden');
+            let close = document.querySelector('#close');
+            close.addEventListener('click', (e) => {
+                popUpBox.remove();
+                document.body.classList.remove('hidden');
+            });
+        }
+    </script>
 </body>
 </html>
