@@ -6,6 +6,7 @@ const dbRouter = require('./src/dbRouter');
 app.set("views", "./templates");
 app.set("view engine", "hbs");
 
+app.use(express.json());
 app.use(express.static("./static"));
 
 app.use("/", router);
