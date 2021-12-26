@@ -14,8 +14,15 @@ h1, h2, h3, p {
 .fontT {
     font-family: 'GilroyThin', normal;
 }
+.dspn {
+    display: none;
+}
 .small {
     font-size: 12px;
+}
+.red {
+    color: red;
+    margin-top: 4px;
 }
 a {
     text-decoration: none;
@@ -202,6 +209,7 @@ body.hidden {
     color: #fff;
     background-color: #F9B300;
     width: 420px;
+    cursor: pointer;
 }
 #close {
     position: absolute;
@@ -210,7 +218,6 @@ body.hidden {
     right: 20px;
     cursor: pointer;
 }
-
 /* NEWS */
 .news {
     position: relative;

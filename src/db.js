@@ -6,7 +6,7 @@ const connectDB = () => {
     return new MongoClient(uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true
-    })
-}
+    });
+};
 
 module.exports = connectDB;

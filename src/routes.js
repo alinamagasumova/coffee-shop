@@ -7,17 +7,12 @@ router.get("/", (req,res) => {
 })
 
 router.get("/catalog", (req, res) => {
-    let categories = {
-        "coffee": "Свежеобжаренный кофе",
-        "tea": "Чай и кофейные напитки",
-        "food": "Здоровое питание"
-    }
     res.render("catalog", {
         title: "Каталог товаров"
     });
 })
 
-router.get("*/:category", (req, res) => {
+router.get("catalog/:category", (req, res) => {
     let categories = {
         "coffee": "Свежеобжаренный кофе",
         "tea": "Чай и кофейные напитки",
@@ -31,6 +26,12 @@ router.get("*/:category", (req, res) => {
 router.get("/basket", (req,res) => {
     res.render("basket", {
         title: "Корзина"
+    })
+})
+
+router.get("/admin", (req,res) => {
+    res.render("admin", {
+        title: "Админка"
     })
 })
 

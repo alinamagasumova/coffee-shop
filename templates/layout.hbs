@@ -58,10 +58,11 @@
                     <img src="/images/logo.png" alt="Logo" class="logo">
                 </a>
                 <h3 class="fontB" style="margin: 10px;">Войти в админку</h3>
-                <form action="">
-                    <input type="email" name="emailAdmin" placeholder="Введите email" id="adminEmailInp">
-                    <input type="password" name="passwordAdmin" placeholder="Введите пароль" id="adminEmailInp">
-                    <input type="button" value="Войти" id="goBtn">
+                <form action="/admin" id='workshit'>
+                    <input type="text" name="loginAdmin" placeholder="Введите login" id="adminLoginInp">
+                    <input type="password" name="passwordAdmin" placeholder="Введите пароль" id="adminPwdInp">
+                    <p class='small red dspn' id='notCorrect'>Логин или пароль неверен</p>
+                    <input type="submit" value="Войти" id="goBtn">
                 </form>
             </div>`;
             popUpBox.classList.add('popup');
@@ -71,6 +72,20 @@
             close.addEventListener('click', (e) => {
                 popUpBox.remove();
                 document.body.classList.remove('hidden');
+            });
+
+            document.getElementById('workshit').addEventListener('submit', (e) => {
+                e.preventDefault();
+                document.getElementById('notCorrect').classList.add('dspn');
+                let login = document.getElementById('adminLoginInp');
+                let pwd = document.getElementById('adminPwdInp');
+                console.log(pwd.value, login.value)
+                if (login.value == 'admin' && pwd.value.toString() == '10102020') {
+                    e.target.submit();
+                } else {
+                    auth = false;
+                    document.getElementById('notCorrect').classList.remove('dspn');
+                }
             });
         }
     </script>
