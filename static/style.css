@@ -214,7 +214,7 @@ body.hidden {
 /* NEWS */
 .news {
     position: relative;
-    padding-top: 50px;
+    padding-top: 30px;
     z-index: 1;
     height: 1000px;
 }
