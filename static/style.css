@@ -104,6 +104,8 @@ footer form {
     height: 40px;
     padding: 5px;
 }
+
+/*CATALOG*/
 .catalog-body {
     padding-top: 50px;
 }
@@ -146,38 +148,42 @@ footer form {
     display: flex;
 }
 .catalog-item3 {
-    padding: 40px 40px 0 40px
+    height: 420px;
+    padding: 60px 40px 0 40px;
 }
-
-
-
-
-
-
-
-
 
 /* NEWS */
 .news {
     position: relative;
-    height: 50vh;
+    padding-top: 50px;
+    z-index: 1;
+    height: 1000px;
 }
 .news-grid {
-    /* display: grid; */
+    display: flex;
     width: 100%;
-    /* gap: 10px; */
-    /* grid-template-areas: 'long long short'
-                         'short long long'; */
-    /* grid-template-columns: 66% auto; */
-    /* grid-template-rows: 50% 50%; */
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 50px;
 }
-
 .news-a:hover {
     color: #F9B300;
 }
+.news-grid_first, .news-grid_second {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
 .news-container {
-    box-shadow: 0px 0px 30px rgba(146, 146, 146, 0.2);
+    box-shadow: 0 0 30px rgba(146, 146, 146, 0.2);
     border-radius: 20px;
+    height: 400px;
+    background-color: #ffffff;
+    z-index: 1;
+    /*padding-bottom: 50px;*/
+}
+.news-containerShort {
+    width: 680px;
 }
 .news-long-text {
     width: 70%;
@@ -187,16 +193,63 @@ footer form {
 .long {
     display: flex;
     justify-content: space-between;
-    /* grid-area: long; */
+    width: 60%;
 }
 .short {
+    width: 40%;
     padding: 50px;
     box-sizing: border-box;
-    /* grid-area: short; */
 }
 .long img {
     width: 30%;
 }
+.news__container-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.news__svg {
+    z-index: 0;
+}
+.news__light {
+    margin-top: -10px;
+    height: 500px;
+    width: 100%;
+    background-color: #FFF7E1;
+    z-index: 0;
+}
+.news-vector{
+    position: relative;
+    height: 288px;
+    /*background-color: #FFF7E1;*/
+}
+.vector-news {
+    position: absolute;
+    bottom: 7%;
+    left: 0;
+    transform: rotate(180deg);
+}
+.vector-news_div {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #F9B300;
+    height: 100px;
+    width: 100%;
+}
+.news__bean {
+    position: absolute;
+    right: 0;
+    width: 450px;
+}
+.news__cup {
+    position: absolute;
+    bottom: -25%;
+    right: -2%;
+    width: 440px;
+}
+
+
 
 
 
