@@ -80,7 +80,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 100px 0 50px 0;
+    margin: 80px 0 40px 0;
 }
 footer input {
     border-radius: 20px;
@@ -210,7 +210,6 @@ body.hidden {
     right: 20px;
     cursor: pointer;
 }
-
 /* NEWS */
 .news {
     position: relative;
@@ -221,9 +220,9 @@ body.hidden {
 .news-grid {
     display: flex;
     width: 100%;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
-    padding-top: 50px;
+    margin-top: 30px;
 }
 .news-a:hover {
     color: #F9B300;
@@ -231,12 +230,12 @@ body.hidden {
 .news-grid_first, .news-grid_second {
     width: 100%;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 .news-container {
     box-shadow: 0 0 30px rgba(146, 146, 146, 0.2);
     border-radius: 20px;
-    height: 400px;
+    height: 320px;
     background-color: #ffffff;
     z-index: 1;
     /*padding-bottom: 50px;*/
@@ -272,7 +271,7 @@ body.hidden {
 }
 .news__light {
     margin-top: -10px;
-    height: 500px;
+    height: 600px;
     width: 100%;
     background-color: #FFF7E1;
     z-index: 0;
@@ -284,17 +283,16 @@ body.hidden {
 }
 .vector-news {
     position: absolute;
-    bottom: 7%;
+    bottom: 9%;
     left: 0;
     transform: rotate(180deg);
 }
 .vector-news_div {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     background-color: #F9B300;
     height: 100px;
-    width: 100%;
 }
 .news__bean {
     position: absolute;
@@ -303,9 +301,9 @@ body.hidden {
 }
 .news__cup {
     position: absolute;
-    bottom: -25%;
-    right: -2%;
-    width: 440px;
+    bottom: -6%;
+    right: 0;
+    width: 420px;
 }
 
 
