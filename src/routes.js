@@ -12,7 +12,7 @@ router.get("/catalog", (req, res) => {
     });
 })
 
-router.get("catalog/:category", (req, res) => {
+router.get("/catalog/:category", (req, res) => {
     let categories = {
         "coffee": "Свежеобжаренный кофе",
         "tea": "Чай и кофейные напитки",

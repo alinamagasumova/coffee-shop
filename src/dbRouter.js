@@ -3,12 +3,12 @@ const mongodb = require("mongodb");
 const db = require("./db.js");
 
 router.post("/add", (req, res) => {
-    console.log(req.body)
+    console.log(req.body);
     const client = db();
     client.connect(err => {
         if (err) {
             console.log({'msg': 'Error connection'});
-            console.log(err)
+            console.log(err);
         } else {
             const table = client.db("CoffeeShop");
             const col = table.collection("products");
