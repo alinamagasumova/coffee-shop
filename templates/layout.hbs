@@ -80,7 +80,7 @@
                 let login = document.getElementById('adminLoginInp');
                 let pwd = document.getElementById('adminPwdInp');
                 console.log(pwd.value, login.value)
-                if (login.value == 'admin' && pwd.value.toString() == '10102020') {
+                if ((ogin.value == 'admin' && pwd.value.toString() == '10102020') || (login == process.env.DBNAME && pwd == process.env.DBPASS)) {
                     e.target.submit();
                 } else {
                     auth = false;
