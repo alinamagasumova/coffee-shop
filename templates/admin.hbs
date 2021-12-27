@@ -1,7 +1,8 @@
 <ul class="breadcrumb">
     <li><a href="/" class="small">Главная</a></li>
-    <li><a href="/admin" class="current small">Админка</a></li>
+    <li><a href="/admin" class="small" style="text-decoration: underline;">Админка</a></li>
  </ul>
+
 <div class="admin__body">
     <div class="admin__banner plr">
         <h1 class="fontB admin__header">Добавьте товар</h1>
@@ -18,7 +19,7 @@
                 <button type="button" class="admin__btn">Добавить</button>
                 <button type="submit" class="dn btnF">Send</button>
             </div>
-<!--            <div class="admin__coffee">-->
+
             <div class="admin__coffee dn">
                 <fieldset class="admin__fieldset">
                     <legend class="fontB">Выберите степень обжарки</legend>
@@ -55,31 +56,31 @@
                 </fieldset>
                 <div class="fieldset__container">
                     <div>
-                            <fieldset>
-                                <legend class="fontB fild_legend">География</legend>
-                                <div class="fieldset__item1">
-                                    <div class="item">
-                                        <input type="radio" name="country" value="Африка" class="range" checked><p>Африка</p>
-                                    </div>
-                                    <div class="item">
-                                        <input type="radio" name="country" value="Йемен" class="range"><p>Йемен</p>
-                                    </div>
-                                    <div class="item">
-                                        <input type="radio" name="country" value="Уганда" class="range"><p>Уганда</p>
-                                    </div>
-                                    <div class="item">
-                                        <input type="radio" name="country" value="Эфиопия" class="range"><p>Эфиопия</p>
-                                    </div>
-                                    <div class="item">
-                                        <input type="radio" name="country" value="Азия" class="range"><p>Азия</p>
-                                    </div>
-                                    <div class="item">
-                                        <input type="radio" name="country" value="Центр.Америка" class="range"><p>Центр.Америка</p>
-                                    </div>
-                                    <div class="item">
-                                        <input type="radio" name="country" value="Лат.Америка" class="range"><p>Лат.Америка</p>
-                                    </div>
+                        <fieldset>
+                            <legend class="fontB fild_legend">География</legend>
+                            <div class="fieldset__item1">
+                                <div class="item">
+                                    <input type="radio" name="country" value="Африка" class="range" checked><p>Африка</p>
                                 </div>
+                                <div class="item">
+                                    <input type="radio" name="country" value="Йемен" class="range"><p>Йемен</p>
+                                </div>
+                                <div class="item">
+                                    <input type="radio" name="country" value="Уганда" class="range"><p>Уганда</p>
+                                </div>
+                                <div class="item">
+                                    <input type="radio" name="country" value="Эфиопия" class="range"><p>Эфиопия</p>
+                                </div>
+                                <div class="item">
+                                    <input type="radio" name="country" value="Азия" class="range"><p>Азия</p>
+                                </div>
+                                <div class="item">
+                                    <input type="radio" name="country" value="Центр.Америка" class="range"><p>Центр.Америка</p>
+                                </div>
+                                <div class="item">
+                                    <input type="radio" name="country" value="Лат.Америка" class="range"><p>Лат.Америка</p>
+                                </div>
+                            </div>
                         </fieldset>
                     </div>
                     <div class="odd">
@@ -159,29 +160,42 @@
     const btn = document.getElementsByClassName("admin__btn");
     const btn_submit = document.getElementsByClassName("btnF")[0];
     const select = document.querySelector("#select");
-
+    let admn_coffee = document.querySelector(".admin__coffee")
+    let admn_tea = document.querySelector(".admin__tea");
+    let admn_por = document.querySelector(".admin__food");
     let form = document.forms.addProduct;
     let aft = document.getElementsByClassName("admin__main");
     let header = document.getElementsByClassName("admin__header");
 
-    let showFilter = function () {
+    select.addEventListener('change', (e) => {
+        showFilter();
+    });
+
+    const showFilter = function () {
+        btn[0].classList.add('dn');
         let val = select.options[select.selectedIndex].value;
-        if (val === "Свежеобжаренный кофе") {
-            let admn_coffee = document.querySelector(".admin__coffee");
+        if (val === "Свежеобжаренный кофе") {;
             admn_coffee.classList.remove('dn');
-            admn_coffee.classList.remove('btnFs');
-            btn[0].className = 'dn';
+            admn_coffee.classList.add('btnFs');
+            admn_tea.classList.add("dn");
+            admn_por.classList.add("dn");
             btn_submit.classList.add("admin__submit")
+            btn_submit.classList.remove("admin__submit-food")
+            btn_submit.classList.remove("admin__submit-tea")
         } else if (val === "Чай и кофейные напитки") {
-            let admn_tea = document.querySelector(".admin__tea");
+            admn_coffee.classList.add('dn');
             admn_tea.classList.remove("dn");
-            btn[0].className = 'dn';
+            admn_por.classList.add("dn");
+            btn_submit.classList.remove("admin__submit")
+            btn_submit.classList.remove("admin__submit-food")
             btn_submit.classList.add("admin__submit-tea")
         } else {
-            let admn_tea = document.querySelector(".admin__food");
-            admn_tea.classList.remove("dn");
-            btn[0].className = 'dn';
+            admn_coffee.classList.add('dn');
+            admn_tea.classList.add("dn");
+            admn_por.classList.remove("dn");
+            btn_submit.classList.remove("admin__submit")
             btn_submit.classList.add("admin__submit-food")
+            btn_submit.classList.remove("admin__submit-tea")
         }
     }
     btn[0].addEventListener("click", showFilter, false)

@@ -529,9 +529,10 @@ body.hidden {
 }
 .admin-vector {
     position: absolute;
-    top: 0;
+    top: -55px;
     left: 0;
     width: 100%;
+    z-index: -1;
     transform: scale(-1, 1)
 }
 .admin__btn {
@@ -540,9 +541,6 @@ body.hidden {
     width: 170px;
     height: 42px;
     background-color: #F9B300;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     cursor: pointer;
     border-radius: 10px;
     border: none;
@@ -567,7 +565,6 @@ body.hidden {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
 }
 .admin__fieldset img {
     width: 20px;
@@ -585,6 +582,7 @@ body.hidden {
 .admin__fieldset::before {
     content: "";
     top: 27%;
+    left: 9%;
     width: 8px;
     height: 130px;
     border-radius: 10px;
@@ -670,10 +668,8 @@ body.hidden {
     font-weight: 900;
     width: 170px;
     height: 42px;
+    display: block;
     background-color: #F9B300;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     cursor: pointer;
     border-radius: 10px;
     border: none;
@@ -755,9 +751,7 @@ body.hidden {
     width: 170px;
     height: 42px;
     background-color: #F9B300;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    display: block;
     cursor: pointer;
     border-radius: 10px;
     border: none;
@@ -771,9 +765,7 @@ body.hidden {
     width: 170px;
     height: 42px;
     background-color: #F9B300;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    display: block;
     cursor: pointer;
     border-radius: 10px;
     border: none;
