@@ -20,7 +20,7 @@
             <a href="/basket" style="text-decoration: none;">
                 <img src="/images/svg/basket.svg" alt="basket" class="ml">
             </a>
-            <img src="/images/svg/man.svg" alt="man" class="ml" onclick="adminPopUp()" style="cursor: pointer;">
+            <img src="/images/svg/man.svg" alt="man" id="man" class="ml" onclick="adminPopUp()" style="cursor: pointer;">
         </div>
     </header>
     {{{body}}}
@@ -32,7 +32,7 @@
                 <p style="width: 40%; margin: 1rem 0;">Подпишитесь на нашу рассылку прямо сейчас и будьте в курсе новых поставок, скидок и эксклюзивных предложений.</p>
                 <form action="">
                     <input type="email" name="emailFollow" placeholder="Ваш email" id="followInp">
-                    <input type="button" value="Подписаться" id="followBtn">
+                    <input type="button" value="Подписаться" id="followBtn" style="cursor: pointer;">
                 </form>
                 <p class="fontT small" style="margin-top: 12px;">Нажимая на кнопку “Подписаться”, вы принимаете правила <span style="color: #F9B300;">пользовательского соглашения</span></p>
             </div>
@@ -43,13 +43,14 @@
                 <div class="links">
                 <p class="ml"><a href="/catalog">Каталог товаров</a></p>
                 <p class="ml"><a href="/">Блог</a></p>
-                <p class="ml"><a href="/">Контакты</a></p>
+                <p class="ml"><a href="/contacts">Контакты</a></p>
             </div>
             </div>
         </div>
     </footer>
     <script>
-        const adminPopUp = (e) => {
+        const adminPopUp = () => {
+            console.log(document.querySelector('#man'))
             if (localStorage.getItem('login')) {
                 document.location.href = '/admin';
             } else {
@@ -90,8 +91,10 @@
                         document.getElementById('notCorrect').classList.remove('dspn');
                     }
                 });
-            }
-            
+            }   
+        }
+        if (localStorage.getItem('login')) {
+            document.querySelector('#man').classList.add('orange');
         }
     </script>
 </body>

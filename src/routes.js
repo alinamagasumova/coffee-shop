@@ -19,7 +19,8 @@ router.get("/catalog/:category", (req, res) => {
         "food": "Здоровое питание"
     }
     res.render("tempCatalog", {
-        title: categories[req.params.category]
+        title: categories[req.params.category],
+        cat: req.params.category
     })
 })
 
@@ -27,6 +28,10 @@ router.get("/basket", (req,res) => {
     res.render("basket", {
         title: "Корзина"
     })
+})
+
+router.get("/contacts", (req,res) => {
+    res.render("contacts");
 })
 
 router.get("/admin", (req,res) => {
