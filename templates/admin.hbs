@@ -2,15 +2,108 @@
     <li><a href="/" class="small">Главная</a></li>
     <li><a href="/admin" class="current small">Админка</a></li>
  </ul>
-<form method="POST" id="addProduct">
-    <input type="text" placeholder="Название продукта">
-    <select name="type" id="">
-        <option value="Свежеобжаренный кофе">Свежеобжаренный кофе</option>
-        <option value="Чай и кофейные напитки">Чай и кофейные напитки</option>
-        <option value="Здоровое питание">Здоровое питание</option>
-    </select>
-    <input type="text" name="description" placeholder="Описание товара">
-    <input type="number" name="cost" id="" placeholder="Стоимость продукта">
-    <button type="submit">Добавить</button>
-</form>
+<div class="admin__body">
+    <div class="admin__banner plr">
+        <h1 class="fontB admin__header">Добавьте товар</h1>
+        <form method="POST" id="addProduct">
+            <div class="admin__main">
+                <input type="text" placeholder="Название продукта" class="addProduct-input">
+                <select name="type" id="select">
+                    <option value="Свежеобжаренный кофе">Свежеобжаренный кофе</option>
+                    <option value="Чай и кофейные напитки">Чай и кофейные напитки</option>
+                    <option value="Здоровое питание">Здоровое питание</option>
+                </select>
+                <input type="text" name="description" placeholder="Описание товара" class="addProduct-input">
+                <input type="number" name="cost" placeholder="Стоимость продукта" step="100" class="addProduct-input">
+                <button type="submit" class="admin__btn" onclick="showFilter()">Добавить</button>
+            </div>
+<!--            <div class="admin__coffee">-->
+<!--                <fieldset>-->
+<!--                    <legend class="fontB">Выберите степень обжарки</legend class="fontB">-->
+<!--                    <div class="fieldset_container">-->
+<!--                        <input type="radio" name="color" value="5" class="range" checked>-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="fieldset_container">-->
+<!--                        <input type="radio" name="color" value="4" class="range">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="fieldset_container">-->
+<!--                        <input type="radio" name="color" value="3"  class="range">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="fieldset_container">-->
+<!--                        <input type="radio" name="color" value="2" class="range">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="fieldset_container">-->
+<!--                        <input type="radio" name="color" value="1" class="range">-->
+<!--                            <img src="/images/svg/bean.svg" alt="">-->
+<!--                    </div>-->
+<!--                </fieldset>-->
+<!--            </div>-->
+        </form>
+    </div>
+    <img src="/images/main/Vector.svg" alt="vector" class="admin-vector">
+</div>
 <script src="/js/addProduct.js"></script>
+<script>
+    const btn = document.getElementsByClassName("admin__btn");
+    const select = document.querySelector("#select");
+    let form = document.forms.addProduct;
+    let aft = document.getElementsByClassName("admin__main")
+    const showFilter = (e) => {
+        let val = select.options[select.selectedIndex].value
+        // console.log(val)
+        if (val === "Свежеобжаренный кофе") {
+            form.innerHTML = `
+                <div class="admin__coffee">
+                <fieldset>
+                    <legend class="fontB">Выберите степень обжарки</legend class="fontB">
+                    <div class="fieldset_container">
+                        <input type="radio" name="step" value="5" class="range" checked>
+                            <img src="/images/svg/bean.svg" alt="">
+                            <img src="/images/svg/bean.svg" alt="">
+                            <img src="/images/svg/bean.svg" alt="">
+                            <img src="/images/svg/bean.svg" alt="">
+                            <img src="/images/svg/bean.svg" alt="">
+                    </div>
+                    <div class="fieldset_container">
+                        <input type="radio" name="step" value="4" class="range">
+                            <img src="/images/svg/bean.svg" alt="">
+                            <img src="/images/svg/bean.svg" alt="">
+                            <img src="/images/svg/bean.svg" alt="">
+                            <img src="/images/svg/bean.svg" alt="">
+                    </div>
+                    <div class="fieldset_container">
+                        <input type="radio" name="step" value="3"  class="range">
+                            <img src="/images/svg/bean.svg" alt="">
+                            <img src="/images/svg/bean.svg" alt="">
+                            <img src="/images/svg/bean.svg" alt="">
+                    </div>
+                    <div class="fieldset_container">
+                        <input type="radio" name="step" value="2" class="range">
+                            <img src="/images/svg/bean.svg" alt="">
+                            <img src="/images/svg/bean.svg" alt="">
+                    </div>
+                    <div class="fieldset_container">
+                        <input type="radio" name="step" value="1" class="range">
+                            <img src="/images/svg/bean.svg" alt="">
+                    </div>
+                </fieldset>
+            </div>
+            `;
+            document.body.aft.appendChild(form)
+        }
+    }
+</script>
