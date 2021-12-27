@@ -102,6 +102,53 @@
                         </fieldset>
                     </div>
                 </div>
+                <div class="example-1">
+                    <div class="form-group">
+                        <label class="label">
+                            <i class="material-icons">attach_file</i>
+                            <span class="title">Добавить файл</span>
+                            <input type="file">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="admin__tea dn">
+                <select name="typeTea" id="select" style="width: 235px">
+                    <option value="Черный чай">Черный чай</option>
+                    <option value="Зеленый чай">Зеленый чай</option>
+                    <option value="Молочный улунг">Молочный улунг</option>
+                    <option value="Травяной чай">Травяной чай</option>
+                    <option value="Матча">Матча</option>
+                    <option value="Пуэр">Пуэр</option>
+                    <option value="Кофейные напитки">Кофейные напитки</option>
+                </select>
+                <div class="example-1 ex">
+                    <div class="form-group">
+                        <label class="label">
+                            <i class="material-icons">attach_file</i>
+                            <span class="title">Добавить файл</span>
+                            <input type="file">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="admin__food dn">
+                <select name="typeTea" id="select" style="width: 235px">
+                    <option value="Цикорий и корень цикория">Цикорий и корень цикория</option>
+                    <option value="Ячменные напитки">Ячменные напитки</option>
+                    <option value="Напитки для здоровья">Напитки для здоровья</option>
+                    <option value="Протеиновые смеси">Протеиновые смеси</option>
+                    <option value="Толокняные каши">Толокняные каши</option>
+                </select>
+                <div class="example-1 ex">
+                    <div class="form-group">
+                        <label class="label">
+                            <i class="material-icons">attach_file</i>
+                            <span class="title">Добавить файл</span>
+                            <input type="file">
+                        </label>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
@@ -112,16 +159,29 @@
     const btn = document.getElementsByClassName("admin__btn");
     const btn_submit = document.getElementsByClassName("btnF")[0];
     const select = document.querySelector("#select");
+
     let form = document.forms.addProduct;
     let aft = document.getElementsByClassName("admin__main");
     let header = document.getElementsByClassName("admin__header");
-    let showFilter = function (e) {
+
+    let showFilter = function () {
         let val = select.options[select.selectedIndex].value;
         if (val === "Свежеобжаренный кофе") {
-            let admn_container = document.querySelector(".admin__coffee");
-            admn_container.classList.remove('dn');
+            let admn_coffee = document.querySelector(".admin__coffee");
+            admn_coffee.classList.remove('dn');
+            admn_coffee.classList.remove('btnFs');
             btn[0].className = 'dn';
             btn_submit.classList.add("admin__submit")
+        } else if (val === "Чай и кофейные напитки") {
+            let admn_tea = document.querySelector(".admin__tea");
+            admn_tea.classList.remove("dn");
+            btn[0].className = 'dn';
+            btn_submit.classList.add("admin__submit-tea")
+        } else {
+            let admn_tea = document.querySelector(".admin__food");
+            admn_tea.classList.remove("dn");
+            btn[0].className = 'dn';
+            btn_submit.classList.add("admin__submit-food")
         }
     }
     btn[0].addEventListener("click", showFilter, false)
