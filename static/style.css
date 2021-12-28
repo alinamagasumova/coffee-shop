@@ -774,6 +774,26 @@ body.hidden {
     top: 41%;
 }
 
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin: 2rem;
+  }
+  .products__item {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.133);
+    cursor: pointer;
+  }
+  .products__item:hover {
+    background-color: rgba(0,0,0,0.133);
+  }
+
 @font-face {
     font-family: 'Gilroy';
     src: local('Gilroy'), url('fonts/GilroyBold.ttf') format('truetype');

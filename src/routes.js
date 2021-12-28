@@ -16,7 +16,8 @@ router.get("/catalog/:category", (req, res) => {
     let categories = {
         "coffee": "Свежеобжаренный кофе",
         "tea": "Чай и кофейные напитки",
-        "food": "Здоровое питание"
+        "food": "Здоровое питание",
+        'all': 'Все'
     }
     res.render("tempCatalog", {
         title: categories[req.params.category],

@@ -15,7 +15,7 @@
                     <option value="Здоровое питание">Здоровое питание</option>
                 </select>
                 <input type="text" name="description" placeholder="Описание товара" class="addProduct-input">
-                <input type="number" name="cost" placeholder="Стоимость продукта" step="100" class="addProduct-input">
+                <input type="number" name="cost" placeholder="Стоимость продукта" step="1" class="addProduct-input">
                 <button type="button" class="admin__btn">Добавить</button>
                 <button type="submit" class="dn btnF">Send</button>
             </div>
@@ -144,7 +144,7 @@
                 </div>
             </div>
             <div class="admin__food dn">
-                <select name="typeTea" id="select" style="width: 235px">
+                <select name="typeFood" id="select" style="width: 235px">
                     <option value="Цикорий и корень цикория">Цикорий и корень цикория</option>
                     <option value="Ячменные напитки">Ячменные напитки</option>
                     <option value="Напитки для здоровья">Напитки для здоровья</option>
@@ -165,6 +165,7 @@
     </div>
     <img src="/images/main/Vector.svg" alt="vector" class="admin-vector">
 </div>
+
 <script src="/js/addProduct.js"></script>
 <script>
     const btn = document.getElementsByClassName("admin__btn");

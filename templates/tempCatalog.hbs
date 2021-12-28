@@ -3,5 +3,123 @@
     <li><a href="/catalog" class="small">Каталог</a></li>
     <li><a href="/catalog/{{cat}}" class="current small">{{title}}</a></li>
  </ul>
+
+<div class="products plr">
+
+</div>
+ {{!-- <div class="ban">
+     <div class="orange"></div>
+     <img src="/images/main/Vector.svg" alt="vector" class="admin-vector">
+     <img src="/images/main/beans1.png" alt="" class="banner__bean">
+    <img src="/images/main/coffee-banner.png" alt="" class="banner__cup">
+ </div>
 <h1>{{title}}</h1>
-<h2>kjbvkjwrbdkjwdb</h2>
+
+<div class="admin__coffee dn">
+    <fieldset class="admin__fieldset">
+        <legend class="fontB">Выберите степень обжарки</legend>
+        <div class="fieldset_container">
+            <input type="radio" name="step" value="5" class="range" id="bean5" checked>
+            <label for="bean5">
+                <img src="/images/svg/bean.svg" alt="">
+                <img src="/images/svg/bean.svg" alt="">
+                <img src="/images/svg/bean.svg" alt="">
+                <img src="/images/svg/bean.svg" alt="">
+                <img src="/images/svg/bean.svg" alt="">
+            </label>
+        </div>
+        <div class="fieldset_container">
+            <input type="radio" name="step" value="4" class="range" id="bean4">
+            <label for="bean4">
+                <img src="/images/svg/bean.svg" alt="">
+                <img src="/images/svg/bean.svg" alt="">
+                <img src="/images/svg/bean.svg" alt="">
+                <img src="/images/svg/bean.svg" alt="">
+            </label>
+        </div>
+        <div class="fieldset_container">
+            <input type="radio" name="step" value="3"  class="range" id="bean3">
+            <label for="bean3">
+                <img src="/images/svg/bean.svg" alt="">
+                <img src="/images/svg/bean.svg" alt="">
+                <img src="/images/svg/bean.svg" alt="">
+            </label>
+        </div>
+        <div class="fieldset_container">
+            <input type="radio" name="step" value="2" class="range" id="bean2">
+            <label for="bean2">
+                <img src="/images/svg/bean.svg" alt="">
+                <img src="/images/svg/bean.svg" alt="">
+            </label>
+        </div>
+        <div class="fieldset_container">
+            <input type="radio" name="step" value="1" class="range" id="bean1">
+            <label for="bean1">
+                <img src="/images/svg/bean.svg" alt="">
+            </label>
+        </div>
+    </fieldset>
+    <div class="fieldset__container">
+        <div>
+            <fieldset>
+                <legend class="fontB fild_legend">География</legend>
+                <div class="fieldset__item1">
+                    <div class="item">
+                        <input type="radio" name="country" value="Африка" class="range" id="africa" checked><label for="africa"></label><p>Африка</p></label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="country" value="Йемен" class="range" id="yemen"><label for="yemen"><p>Йемен</p></label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="country" value="Уганда" class="range" id="ugan"><label for="ugan"><p>Уганда</p></label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="country" value="Эфиопия" class="range" id="ephiop"><label for="ephiop"><p>Эфиопия</p></label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="country" value="Азия" class="range" id="asia"><label for="asia"><p>Азия</p></label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="country" value="Центр.Америка" class="range" id="centrAm"><label for="centrAm"><p>Центр.Америка</p></label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="country" value="Лат.Америка" class="range" id="latAm"><label for="latAm"><p>Лат.Америка</p></label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="odd">
+            <fieldset>
+                <legend class="fontB fild_legend2">Вид кофе</legend>
+                <div class="fieldset__item2">
+                    <div class="item">
+                        <input type="radio" name="vid" value="Арабика" class="range" id="arabica" checked><label for="arabica"><p>Арабика</p></label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="vid" value="Робуста" class="range" id="robust"><label for="robust"><p>Робуста</p></label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="vid" value="Смесь арабик" class="range" id="smes"><label for="smes"><p>Смесь арабик</p></label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="vid" value="Смесь арабика/робуста" class="range" id="smesrob"><label for="smesrob"><p>Смесь арабика/Робуста</p></label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="example-1">
+        <div class="form-group">
+            <label class="label">
+                <i class="material-icons">attach_file</i>
+                <span class="title">Добавить файл</span>
+                <input type="file">
+            </label>
+        </div>
+    </div>
+</div> --}}
+
+<script src="/js/getData.js"></script>
+<script>
+    getData("{{cat}}");
+</script>

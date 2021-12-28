@@ -5,9 +5,26 @@ addForm.addEventListener("submit", e => {
     let body = {};
     for (let i = 0; i < e.target.elements.length; i++) {
         let child = e.target.elements[i];
-        if(child.name) {
-            body[child.name] = child.value;
+        if (child.name) {
+            if (child.type == 'radio' && !child.checked) {
+                continue;
+            } else {
+                body[child.name] = child.value;
+            }
         }
+    }
+    if (!(body.type == 'Свежеобжаренный кофе')) {
+        body.step = false;
+        body.country = false;
+        body.vid = false;
+        if (body.type == 'Здоровое питание') {
+            body.typeTea = false;
+        } else {
+            body.typeFood = false;
+        }
+    } else {
+        body.typeTea = false;
+        body.typeFood = false;
     }
     console.log(body);
     sendForm(body, e.target.method, "/api/add");
