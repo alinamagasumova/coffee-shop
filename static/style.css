@@ -760,7 +760,7 @@ body.hidden {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    margin: 2rem;
+    margin: 3rem 0;
   }
 .products__item {
     display: flex;
@@ -771,8 +771,7 @@ body.hidden {
     box-shadow: 0 0 30px rgba(146, 146, 146, 0.2);
     cursor: pointer;
     position: relative;
-    /* height: 300px; */
-    height: auto;
+    min-height: 300px; 
     width: 250px;
     border-radius: 10px;
     -moz-transition: all 0.5s ease-out;
@@ -829,7 +828,7 @@ body.hidden {
     width: 80%;
     height: 2px;
     position: absolute;
-    bottom: 21.5%;
+    bottom: 22%;
     left: 10%;
     background-color: #F9B300;
 }
