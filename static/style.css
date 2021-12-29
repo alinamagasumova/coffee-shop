@@ -723,24 +723,15 @@ body.hidden {
 .example-1 .label:hover i,.example-1 .label:hover .title {
     color:#F9B300;
 }
-.ex {
+.example-1 {
     position: absolute;
-    top: 46%;
+    top: 256px;
     left: calc(50% - (237px / 2));
 }
-.admin__submit-tea {
-    color: #ffffff;
-    font-weight: 900;
-    width: 170px;
-    height: 42px;
-    display: block;
-    background-color: #F9B300;
-    cursor: pointer;
-    border-radius: 10px;
-    border: none;
+.ex {
     position: absolute;
-    left: calc(50% - (170px / 2));
-    top: 10%;
+    top: 438px;
+    left: calc(50% - (237px / 2));
 }
 .btnF {
     position: absolute;
@@ -758,7 +749,7 @@ body.hidden {
     border: none;
     position: absolute;
     left: calc(50% - (170px / 2));
-    top: 83%;
+    top: 500px;
 }
 .admin__submit-food {
     color: #ffffff;
@@ -772,7 +763,7 @@ body.hidden {
     border: none;
     position: absolute;
     left: calc(50% - (170px / 2));
-    top: 73%;
+    top: 400px;
 }
 .products {
     display: grid;
@@ -789,7 +780,8 @@ body.hidden {
     box-shadow: 0 0 30px rgba(146, 146, 146, 0.2);
     cursor: pointer;
     position: relative;
-    height: 300px;
+    /* height: 300px; */
+    height: auto;
     width: 250px;
     border-radius: 10px;
     -moz-transition: all 0.5s ease-out;
