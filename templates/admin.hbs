@@ -16,7 +16,7 @@
                 </select>
                 <input type="text" name="description" placeholder="Описание товара" class="addProduct-input">
                 <input type="number" name="cost" placeholder="Стоимость продукта" step="1" class="addProduct-input">
-<!--                <button type="button" class="admin__btn">Добавить</button>-->
+                <button type="button" class="admin__btn">Добавить</button>
                 <button type="submit" class="dn btnF">Send</button>
             </div>
 
@@ -107,7 +107,7 @@
                                     <input type="radio" name="vid" value="Смесь арабик" class="range" id="smes"><label for="smes">Смесь арабик</label>
                                 </div>
                                 <div class="item">
-                                    <input type="radio" name="vid" value="Смесь арабика/робуста" class="range" id="smesrob"><label for="smesrob">Смесь арабика/Робуста</label>
+                                    <input type="radio" name="vid" value="Смесь арабика/робуста" class="range" id="smesrob"><label for="smesrob">Арабика/Робуста</label>
                                 </div>
                             </div>
                         </fieldset>
@@ -175,7 +175,7 @@
 <script>
     getData('all');
 
-    if ()
+    // if ()
 
     const btn = document.getElementsByClassName("admin__btn");
     const btn_submit = document.getElementsByClassName("btnF")[0];
@@ -188,7 +188,7 @@
     let header = document.getElementsByClassName("admin__header");
 
     const showFilter = function () {
-        // btn[0].classList.add('dn');
+        btn[0].classList.add('dn');
         let val = select.options[select.selectedIndex].value;
         if (val === "Свежеобжаренный кофе") {
             admn_coffee.classList.remove('dn');
@@ -203,9 +203,9 @@
             admn_tea.classList.remove("dn");
             admn_por.classList.add("dn");
             btn_submit.classList.remove("admin__submit")
-            // btn_submit.classList.remove("admin__submit-food")
-            btn_submit.classList.add("admin__submit-food")
-            // btn_submit.classList.add("admin__submit-tea")
+            btn_submit.classList.remove("admin__submit-food")
+            // btn_submit.classList.add("admin__submit-food")
+            btn_submit.classList.add("admin__submit-tea")
         } else {
             admn_coffee.classList.add('dn');
             admn_tea.classList.add("dn");
@@ -215,7 +215,7 @@
             btn_submit.classList.remove("admin__submit-tea")
         }
     }
-    // btn[0].addEventListener("click", showFilter, false)
+    btn[0].addEventListener("click", showFilter, false)
     select.addEventListener('change', (e) => {
         showFilter();
     });

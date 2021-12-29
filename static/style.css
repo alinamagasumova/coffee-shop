@@ -540,9 +540,15 @@ body.hidden {
     width: 170px;
     height: 42px;
     background-color: #F9B300;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     cursor: pointer;
     border-radius: 10px;
     border: none;
+    position: absolute;
+    left: calc(50% - (170px / 2));
+    top: 41%;
 }
 .admin__header {
     text-align: right;
@@ -680,7 +686,7 @@ body.hidden {
 }
 .example-1 {
     position: absolute;
-    top: 45%;
+    top: 60%;
 }
 .example-1 .form-group {
     margin: 2.5em 2em;
@@ -719,7 +725,7 @@ body.hidden {
 }
 .ex {
     position: absolute;
-    top: 27%;
+    top: 46%;
     left: calc(50% - (237px / 2));
 }
 .admin__submit-tea {
@@ -738,7 +744,7 @@ body.hidden {
 }
 .btnF {
     position: absolute;
-    top: 41%;
+    top: 73%;
 }
 .admin__submit {
     color: #ffffff;
@@ -752,7 +758,7 @@ body.hidden {
     border: none;
     position: absolute;
     left: calc(50% - (170px / 2));
-    top: 49%;
+    top: 83%;
 }
 .admin__submit-food {
     color: #ffffff;
@@ -766,7 +772,7 @@ body.hidden {
     border: none;
     position: absolute;
     left: calc(50% - (170px / 2));
-    top: 31%;
+    top: 73%;
 }
 .products {
     display: grid;
