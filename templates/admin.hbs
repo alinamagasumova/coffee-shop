@@ -118,7 +118,7 @@
                         <label class="label">
                             <i class="material-icons">attach_file</i>
                             <span class="title">Добавить файл</span>
-                            <input type="file">
+                            <input type="file" name="photo" id="photo">
                         </label>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                         <label class="label">
                             <i class="material-icons">attach_file</i>
                             <span class="title">Добавить файл</span>
-                            <input type="file">
+                            <input type="file" name="photo" id="photo">
                         </label>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                         <label class="label">
                             <i class="material-icons">attach_file</i>
                             <span class="title">Добавить файл</span>
-                            <input type="file">
+                            <input type="file" name="photo" id="photo">
                         </label>
                     </div>
                 </div>
@@ -164,10 +164,19 @@
         </form>
     </div>
     <img src="/images/main/Vector.svg" alt="vector" class="admin-vector">
+
+    <div class="products" style="margin-top: 200px;">
+        
+    </div>
 </div>
 
 <script src="/js/addProduct.js"></script>
+<script src="/js/getData.js"></script>
 <script>
+    getData('all');
+
+    if ()
+
     const btn = document.getElementsByClassName("admin__btn");
     const btn_submit = document.getElementsByClassName("btnF")[0];
     const select = document.querySelector("#select");

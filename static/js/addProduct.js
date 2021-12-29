@@ -1,5 +1,10 @@
 const addForm = document.forms.addProduct;
 
+function extractFilename(path) {
+    if (path.substr(0, 12) == "C:\\fakepath\\")
+      return path.substr(12);
+  }
+
 addForm.addEventListener("submit", e => {
     e.preventDefault();
     let body = {};
@@ -8,6 +13,11 @@ addForm.addEventListener("submit", e => {
         if (child.name) {
             if (child.type == 'radio' && !child.checked) {
                 continue;
+            } else if (child.name == 'photo') {
+                if (child.value) {
+                    let path = extractFilename(child.value)
+                    body[child.name] = path;
+                }
             } else {
                 body[child.name] = child.value;
             }
