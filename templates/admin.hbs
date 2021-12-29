@@ -107,7 +107,7 @@
                                     <input type="radio" name="vid" value="Смесь арабик" class="range" id="smes"><label for="smes">Смесь арабик</label>
                                 </div>
                                 <div class="item">
-                                    <input type="radio" name="vid" value="Смесь арабика/робуста" class="range" id="smesrob"><label for="smesrob">Смесь арабика/Робуста</label>
+                                    <input type="radio" name="vid" value="Смесь арабика/робуста" class="range" id="smesrob"><label for="smesrob">Арабика/Робуста</label>
                                 </div>
                             </div>
                         </fieldset>
@@ -175,8 +175,6 @@
 <script>
     getData('all');
 
-    //if ()
-
     const btn = document.getElementsByClassName("admin__btn");
     const btn_submit = document.getElementsByClassName("btnF")[0];
     const select = document.querySelector("#select");
@@ -203,9 +201,9 @@
             admn_tea.classList.remove("dn");
             admn_por.classList.add("dn");
             btn_submit.classList.remove("admin__submit")
-            // btn_submit.classList.remove("admin__submit-food")
-            btn_submit.classList.add("admin__submit-food")
-            // btn_submit.classList.add("admin__submit-tea")
+            btn_submit.classList.remove("admin__submit-food")
+            // btn_submit.classList.add("admin__submit-food")
+            btn_submit.classList.add("admin__submit-tea")
         } else {
             admn_coffee.classList.add('dn');
             admn_tea.classList.add("dn");
