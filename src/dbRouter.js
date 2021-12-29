@@ -3,7 +3,6 @@ const mongodb = require("mongodb");
 const db = require("./db.js");
 
 router.post("/add", (req, res) => {
-    // console.log(req.body);
     const client = db();
     client.connect(err => {
         if (err) {
@@ -23,10 +22,9 @@ router.post("/add", (req, res) => {
             });
         }
     });
-})
+});
 
-router.get("category/:category", (req, res) => {
-    // res.send('heu')
+router.get("/category/:category", (req, res) => {
     let client = db();
     let categories = {
         "coffee": "Свежеобжаренный кофе",

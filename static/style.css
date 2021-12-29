@@ -650,20 +650,6 @@ body.hidden {
 .dn {
     display: none;
 }
-.admin__submit-tea {
-    color: #ffffff;
-    font-weight: 900;
-    width: 170px;
-    height: 42px;
-    display: block;
-    background-color: #F9B300;
-    cursor: pointer;
-    border-radius: 10px;
-    border: none;
-    position: absolute;
-    left: calc(50% - (170px / 2));
-    top: 30%;
-}
 .tea__img {
     width: 60px;
 }
@@ -728,6 +714,20 @@ body.hidden {
     top: 27%;
     left: calc(50% - (237px / 2));
 }
+.admin__submit-tea {
+    color: #ffffff;
+    font-weight: 900;
+    width: 170px;
+    height: 42px;
+    display: block;
+    background-color: #F9B300;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    left: calc(50% - (170px / 2));
+    top: 10%;
+}
 .btnF {
     position: absolute;
     top: 41%;
@@ -744,7 +744,7 @@ body.hidden {
     border: none;
     position: absolute;
     left: calc(50% - (170px / 2));
-    top: 59%;
+    top: 49%;
 }
 .admin__submit-food {
     color: #ffffff;
@@ -758,28 +758,84 @@ body.hidden {
     border: none;
     position: absolute;
     left: calc(50% - (170px / 2));
-    top: 41%;
+    top: 31%;
 }
-
-
 .products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin: 2rem;
   }
-  .products__item {
+.products__item {
     display: flex;
-    padding: 40px;
+    padding: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.133);
+    box-shadow: 0 0 30px rgba(146, 146, 146, 0.2);
     cursor: pointer;
-  }
-  .products__item:hover {
-    background-color: rgba(0,0,0,0.133);
-  }
+    position: relative;
+    height: 300px;
+    width: 250px;
+    border-radius: 10px;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+}
+.products__item:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+
+}
+.pa {
+    position: absolute;
+}
+.data_header {
+    top: 60%;
+    font-size: 17px;
+    left: 10%;
+}
+.data_p4 {
+    top: 68%;
+    font-size: 13px;
+    left: 10%;
+    line-height: 1em;
+}
+.data_h2 {
+    bottom: 10%;
+    right: 10%;
+}
+.data_p{
+    left: 10%;
+    bottom: 9%;
+    font-size: 11px;
+}
+.data_p2 {
+    left: 10%;
+    bottom: 13%;
+    font-size: 11px;
+}
+.data_p3 {
+    left: 10%;
+    bottom: 17%;
+    font-size: 11px;
+}
+.img_coffee {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    left: calc(50% - (100px / 2));
+    top: 10%;
+}
+.line {
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    bottom: 21.5%;
+    left: 10%;
+    background-color: #F9B300;
+}
 
 @font-face {
     font-family: 'Gilroy';
