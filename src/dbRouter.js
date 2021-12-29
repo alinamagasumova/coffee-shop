@@ -26,7 +26,7 @@ router.post("/add", (req, res) => {
 })
 
 router.get("category/:category", (req, res) => {
-    res.send('heu')
+    // res.send('heu')
     let client = db();
     let categories = {
         "coffee": "Свежеобжаренный кофе",

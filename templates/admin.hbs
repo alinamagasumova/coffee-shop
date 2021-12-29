@@ -16,7 +16,7 @@
                 </select>
                 <input type="text" name="description" placeholder="Описание товара" class="addProduct-input">
                 <input type="number" name="cost" placeholder="Стоимость продукта" step="1" class="addProduct-input">
-                <button type="button" class="admin__btn">Добавить</button>
+<!--                <button type="button" class="admin__btn">Добавить</button>-->
                 <button type="submit" class="dn btnF">Send</button>
             </div>
 
@@ -168,7 +168,7 @@
 
 <script src="/js/addProduct.js"></script>
 <script>
-    const btn = document.getElementsByClassName("admin__btn");
+    // const btn = document.getElementsByClassName("admin__btn");
     const btn_submit = document.getElementsByClassName("btnF")[0];
     const select = document.querySelector("#select");
     let admn_coffee = document.querySelector(".admin__coffee")
@@ -178,12 +178,8 @@
     let aft = document.getElementsByClassName("admin__main");
     let header = document.getElementsByClassName("admin__header");
 
-    select.addEventListener('change', (e) => {
-        showFilter();
-    });
-
     const showFilter = function () {
-        btn[0].classList.add('dn');
+        // btn[0].classList.add('dn');
         let val = select.options[select.selectedIndex].value;
         if (val === "Свежеобжаренный кофе") {;
             admn_coffee.classList.remove('dn');
@@ -209,5 +205,8 @@
             btn_submit.classList.remove("admin__submit-tea")
         }
     }
-    btn[0].addEventListener("click", showFilter, false)
+    // btn[0].addEventListener("click", showFilter, false)
+    select.addEventListener('change', (e) => {
+        showFilter();
+    });
 </script>
