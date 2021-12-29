@@ -24,17 +24,17 @@ addForm.addEventListener("submit", e => {
         }
     }
     if (!(body.type == 'Свежеобжаренный кофе')) {
-        body.step = false;
-        body.country = false;
-        body.vid = false;
+        body.step = '';
+        body.country = '';
+        body.vid = '';
         if (body.type == 'Здоровое питание') {
-            body.typeTea = false;
+            body.typeTea = '';
         } else {
-            body.typeFood = false;
+            body.typeFood = '';
         }
     } else {
-        body.typeTea = false;
-        body.typeFood = false;
+        body.typeTea = '';
+        body.typeFood = '';
     }
     console.log(body);
     sendForm(body, e.target.method, "/api/add");
