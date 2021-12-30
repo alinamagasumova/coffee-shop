@@ -504,7 +504,8 @@ body.hidden {
 }
 .admin__banner {
     margin-top: 4%;
-    height: 300px;
+    height: auto;
+    position: relative;
 }
 #addProduct {
     margin: 2% 0;
@@ -681,10 +682,6 @@ body.hidden {
     left: calc(50% - (170px / 2));
     top: 48%;
 }
-.example-1 {
-    position: absolute;
-    top: 60%;
-}
 .example-1 .form-group {
     margin: 2.5em 2em;
 }
@@ -722,12 +719,12 @@ body.hidden {
 }
 .example-1 {
     position: absolute;
-    top: 256px;
+    top: 210px;
     left: calc(50% - (237px / 2));
 }
 .ex {
     position: absolute;
-    top: 438px;
+    top: 390px;
     left: calc(50% - (237px / 2));
 }
 .btnF {
@@ -746,7 +743,7 @@ body.hidden {
     border: none;
     position: absolute;
     left: calc(50% - (170px / 2));
-    top: 500px;
+    top: 550px;
 }
 .admin__submit-food {
     color: #ffffff;
@@ -760,7 +757,7 @@ body.hidden {
     border: none;
     position: absolute;
     left: calc(50% - (170px / 2));
-    top: 400px;
+    top: 370px;
 }
 .products {
     display: grid;
@@ -844,7 +841,9 @@ body.hidden {
     align-items: center;
     gap: 5px;
 }
-
+.mt {
+    margin-top: 13rem;
+}
 
 @font-face {
     font-family: 'Gilroy';
